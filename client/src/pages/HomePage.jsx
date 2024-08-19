@@ -11,7 +11,7 @@ function HomePage() {
     try {
       setIsError(false);
       setIsLoading(true);
-      const results = await axios(`tourist-attraction-puce.vercel.app/trips?keywords=${searchKeyword}`);
+      const results = await axios(`tourist-attraction-puce.vercel.app?keywords=${searchKeyword}`);
       setTrips(results.data.data);
       setIsLoading(false);
     } catch (error) {
